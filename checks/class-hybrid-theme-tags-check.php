@@ -12,7 +12,7 @@
  *
  * This check is not added to the global array of checks, because it  apply to all themes.
  */
-class FSE_Required_Tags_Check implements themecheck {
+class Hybrid_theme_Tags_Check implements themecheck {
 	/**
 	 * Error messages, warnings and info notices.
 	 *
@@ -86,6 +86,4 @@ class FSE_Required_Tags_Check implements themecheck {
 	}
 }
 
-
-
-
+$themechecks[] = new Hybrid_theme_Tags_Check();
