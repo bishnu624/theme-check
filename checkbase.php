@@ -378,6 +378,7 @@ function tc_adapt_checks_for_fse_themes( $php_files, $css_files, $other_files ) 
 			|| $check instanceof Theme_Support_Title_Tag_Check
 			|| $check instanceof Screen_Reader_Text_Check
 			|| $check instanceof Include_Check
+			|| $check instanceof Hybrid_theme_Tags_Check
 		) {
 			unset( $themechecks[ $key ] );
 		}
@@ -385,6 +386,7 @@ function tc_adapt_checks_for_fse_themes( $php_files, $css_files, $other_files ) 
 
 	// Add FSE specific checks.
 	$themechecks[] = new FSE_Required_Files_Check();
+	$themechecks[] = new FSE_Required_Tags_Check();
 
 	return true;
 }
